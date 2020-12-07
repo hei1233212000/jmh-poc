@@ -3,6 +3,3 @@
 
 === How to run
 `./gradlew jmh`
-
-=== TODO
-- use logger
