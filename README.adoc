@@ -1,0 +1,8 @@
+=== POC for link:++https://github.com/openjdk/jmh++[JMH]
+- This project is using link:++https://github.com/melix/jmh-gradle-plugin++[jmh-gradle-plugin] to execute the JMH benchmark
+
+=== How to run
+`./gradlew jmh`
+
+=== TODO
+- use logger
