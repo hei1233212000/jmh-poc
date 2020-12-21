@@ -3,6 +3,7 @@ package poc.jmh.benchmark
 import org.openjdk.jmh.annotations.*
 import org.openjdk.jmh.annotations.Mode.All
 import org.openjdk.jmh.infra.Blackhole
+import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import poc.jmh.sumBigDecimal
 import poc.jmh.sumInteger
@@ -29,8 +30,8 @@ open class CalculationsBenchmark {
 
     @State(Scope.Benchmark)
     class MyState {
-        val firstInteger = 1;
-        val secondInteger = 2;
+        val firstInteger = 1
+        val secondInteger = 2
 
         val firstBigDecimal: BigDecimal = BigDecimal.ONE
         val secondBigDecimal: BigDecimal = BigDecimal.valueOf(2)
@@ -46,7 +47,7 @@ open class CalculationsBenchmark {
         }
 
         private companion object {
-            val logger = LoggerFactory.getLogger(MyState::class.java)
+            val logger: Logger = LoggerFactory.getLogger(MyState::class.java)
         }
     }
 }
